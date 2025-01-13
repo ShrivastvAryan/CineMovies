@@ -1,0 +1,564 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+    
+html{
+    width:100vw;
+    overflow-x: hidden;
+    height:100vh;
+}
+
+body{
+    width:100vw;
+    overflow-x: hidden;
+    height:100vh;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+::-webkit-scrollbar {
+    width: 0.5rem; 
+    height: 0.5rem; 
+}
+
+::-webkit-scrollbar-track {
+   background: #0c0c0c;
+   border-radius:1rem;
+   -webkit-border-radius:1rem;
+   -moz-border-radius:1rem;
+   -ms-border-radius:1rem;
+   -o-border-radius:1rem;
+   -webkit-border-radius: 6p;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(4, 140, 252);
+    border-radius:1rem;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    -ms-border-radius:1rem;
+    -o-border-radius:1rem;
+}
+
+/* Customize the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(4, 110, 196); /* Color when hovered */
+}
+
+.dark-mode--body{
+    background-color:  black;
+}
+
+/* Header part */
+
+.logo{
+    background: url("Photos/movie-app-logo.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-top: 0.6rem;
+    height: 2.2rem;
+    width: 10rem;
+
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 3.5rem;
+    background-color:rgb(0, 5, 8,1);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    gap: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(4, 140, 252, 0.2), 0 6px 20px 0 rgba(4, 140, 252, 0.19);
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+.header-class{
+    display:flex;
+    flex-wrap: nowrap;
+    width: 70rem;
+    gap: 3rem;
+    align-items: center;
+    color: aliceblue;
+    justify-content: flex-end;
+    align-content: flex-end;
+
+    &:hover{
+        cursor:pointer;
+    }
+
+    & p:hover{
+        color: rgb(4, 140, 252);
+}
+}
+
+/*Hero-Section*/
+
+.poster-div{
+    position: relative;
+}
+
+.hero--section-poster{
+    height: 28rem;
+    width: 100%;
+    background-size: contain;
+    z-index:1;
+    position: absolute;
+}
+
+.poster{
+    z-index: 1;
+    color: aliceblue;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    width: 25rem;
+    height: 15.5rem;
+    padding:1rem;
+    margin-top: 6rem;
+    margin-left: 2rem;
+    background-color: rgba(0, 0, 0, 0.514);
+    border-radius: 0.6rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+
+    & .poster-heading{
+        font-size: 2rem;
+        font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    }
+
+    & .poster-info{
+        font-size: 1.3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-top: 0.5rem;
+    }
+
+    & .poster--imdb-rating{
+        display: inline-block;
+        font-size: 1.3rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0.3rem;
+        margin-top: 1rem;
+        text-align: center;
+        background-color: green;
+        border-radius: 0.6rem;
+        -webkit-border-radius: 0.6rem;
+        -moz-border-radius: 0.6rem;
+        -ms-border-radius: 0.6rem;
+        -o-border-radius: 0.6rem;
+}
+}
+
+.play--btn-poster{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    background: linear-gradient(183deg, rgba(25,170,181,1) 0%, rgba(8,66,240,1) 96%);
+    z-index: inherit;
+    position: absolute;
+    color: aliceblue;
+    margin: 23rem 0 0 2rem;
+    z-index: 2;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.Top--Movies-div{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 1;
+    color: aliceblue;
+    font-size: 2rem;
+    position:relative;
+    margin-top: 30rem;
+    color: rgb(4, 140, 252);
+    
+}
+
+.top-series{
+    padding-left: 2rem;
+}
+
+.movie-cards{
+    padding: 1rem 0 0 2rem;
+    height: auto;
+    margin-bottom: 3rem;
+
+   & .movie-card{
+    z-index:2;
+    position: relative;
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    color: aliceblue;
+    margin-top: 1rem;
+    }
+    
+    & .movie-name{
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: 700;
+        text-align: center;
+
+        &:hover{
+            color: rgb(4, 140, 252);
+        }
+    }
+
+    & .movie-type{
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: 600;
+        background: none;
+        text-align: center;
+    }
+
+    & .movie-runtime{
+        font-size: 0.6rem;
+        font-family: sans-serif;
+        font-weight: 500;
+        
+    }
+
+    & span{
+        width: 13rem;
+        border-radius: 0.7rem;
+        -webkit-border-radius: 0.7rem;
+        -moz-border-radius: 0.7rem;
+        -ms-border-radius: 0.7rem;
+        -o-border-radius: 0.7rem;
+
+        &:hover{
+            cursor:pointer;            
+            
+        }
+}
+}
+
+.movie-cards--photo{
+    height: 20rem;
+    width: 13rem;
+    border-radius: 0.7rem;
+}
+
+.hover-container{
+    height: auto;
+    width: 13rem;
+    border-radius: 1rem;
+    background: rgb(88,88,88);
+    background: linear-gradient(183deg, rgb(58, 58, 58) 0%, rgb(24, 24, 24) 96%);
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    z-index: 3;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+
+    & .hover-container--title{
+        display: inline-block;
+        background: none;
+        font-size: 1.3rem;
+        text-align: center;
+        background: none;
+        font-weight: 600;
+        color: aliceblue;
+    }
+
+    & .dis,.rating,.run-time{
+        display:block;
+        font-size: 1rem;
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    & .caste{
+        text-align: left;
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    & .play-btn--container{
+        color: aliceblue;
+        background: rgb(25,170,181);
+        background: linear-gradient(183deg, rgba(25,170,181,1) 0%, rgba(8,66,240,1) 96%);
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 0.2rem;
+        border-radius: 0.8rem;
+        -webkit-border-radius: 0.8rem;
+        -moz-border-radius: 0.8rem;
+        -ms-border-radius: 0.8rem;
+        -o-border-radius: 0.8rem;
+        text-align: center;
+        border: none;
+        display: flex;
+        position: ;
+        align-content: center;
+        justify-content: center;
+    }
+    
+}
+
+
+
+.footer{
+    height: 8.5rem;
+    width: 100%;
+    position:relative;
+    bottom: 0;
+    background-color: rgba(41, 41, 41, 0.568);
+    font-size: 1rem;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    & p{
+        text-align: center;
+        padding-top: 1rem;
+    }
+}
+
+
+/*Dark-mode*/
+
+.light-mode{
+
+    & .dark-mode--body{
+        background-color: aliceblue;
+    }
+
+    & .logo{
+        background: url("/Photos/movie-app-logo-lightmode.png");
+        background-size:cover;
+        background-repeat: no-repeat;
+        margin-top: 0.6rem;
+        height: 2.2rem;
+        width: 10rem;
+    }
+
+    & header{
+        background-color: aliceblue;
+    }
+
+    & .header-class{
+        color: rgb(4, 140, 252);
+    }
+
+    & footer{
+        background-color: rgb(77, 76, 76);
+    }
+
+    & .movie-card{
+        color: rgb(25,170,181);
+    }
+
+    & .hover-container{
+        background: linear-gradient(183deg, rgba(25,170,181,1) 0%, rgba(8,66,240,1) 96%);
+        color: aliceblue;
+    }
+}
+
+@media(max-width:450px){
+    .light-mode .logo{
+            background: url("/Photos/movie-app-logo-lightmode.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            height: 1rem;
+            width: 8rem;
+    
+        }
+    }
+
+
+
+
+/*Responsive*/
+@media(max-width:500px){
+
+
+    ::-webkit-scrollbar {
+        width: 0.2rem; 
+        height: 0.2rem; 
+    }
+
+    header{
+        width: 100%;
+        font-weight: 600;
+        font-size: 0.4rem;
+        gap: 0.8rem;
+        z-index: 4;
+        height: 2rem;
+    }
+
+    .logo{
+        background: url("Photos/movie-app-logo.png");
+        background-size:contain;
+        background-repeat: no-repeat;
+        margin-top: ;
+        height: 1rem;
+        width: 8rem;
+    
+    }
+    
+    .header-class{
+        display:flex;
+        gap: 1rem;
+        width: 18rem;
+        padding-right: 1rem;
+        justify-content: flex-end;
+    }
+
+    .hero--section-poster{
+        height: 15rem;
+        width: 100%;
+        background-size: cover;
+        z-index:1;
+        position: absolute;
+    }
+
+    .poster{
+        width: 10rem;
+        height: 7.5rem;
+        padding:0.5rem;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        overflow: hidden;
+    
+        & .poster-heading{
+            font-size: 0.7rem;
+        }
+    
+        & .poster-info{
+            font-size: 0.5rem;
+        }
+    
+        & .poster--imdb-rating{
+            margin-top: 1.4rem;
+            font-size: 0.4rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: green;
+    }
+    }
+    
+    .play--btn-poster{
+        font-size: 0.5rem;
+        background: linear-gradient(183deg, rgba(25,170,181,1) 0%, rgba(8,66,240,1) 96%);
+        z-index: 3;
+        position: absolute;
+        color: aliceblue;
+        margin: 13rem 0 0 7.5rem;
+        padding: 0.3rem;
+    }
+
+    .Top--Movies-div{
+        font-size: 1rem;
+        position:relative;
+        margin-top: 17rem;
+        margin-left: 1rem;
+        color: rgb(4, 140, 252);
+        
+    }
+
+    .top-series{
+        padding-left: 1rem;
+    }
+    
+    .movie-cards{
+        padding: 1rem;
+        height: auto;
+    
+       & .movie-card{
+        z-index:1;
+        position: relative;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        color: aliceblue;
+        }
+        
+        & .movie-name{
+            font-size: 0.5rem;    
+        }
+    
+        & .movie-type{
+            font-size: 1rem;
+            font-family: sans-serif;
+            font-weight: 600;
+            background: none;
+            text-align: center;
+        }
+    
+        & .movie-runtime{
+            font-size: 0.6rem;
+            font-family: sans-serif;
+            font-weight: 500;
+            
+        }
+    
+        & .play--btn-movie{
+            
+    }
+    
+        & span{
+            width: 9rem;
+            border-radius: 0.7rem;
+            -webkit-border-radius: 0.7rem;
+            -moz-border-radius: 0.7rem;
+            -ms-border-radius: 0.7rem;
+            -o-border-radius: 0.7rem;
+    
+            &:hover{
+                cursor:pointer;            
+                
+            }
+    }
+    }
+    
+    .movie-cards--photo{
+        height: 12rem;
+        width: 9rem;
+        border-radius: 0.7rem;
+        background-size: auto;
+    }
+
+    .footer{
+        font-size: 0.6rem;
+        height: 7rem;
+    
+        & p{
+            text-align: center;
+            padding-top: 0.5rem;
+        }
+    }
+
+      
+}
+
+@media(min-width:1380px){
+    .header-class{
+        display:flex;
+        gap: 4rem;
+        width: 85%;
+        
+        padding-right: 3rem;
+        justify-content: flex-end;
+    }
+
+}
+
