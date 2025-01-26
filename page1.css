@@ -139,23 +139,23 @@ body{
     align-content: center;
     color: aliceblue;
 
-    &:hover{
+    &:hover,:active{
         cursor: pointer;
-        transform: scaleX(1.2);
+        transform: scale(1.1,1.1);
         border-radius: 1rem;
         -webkit-border-radius: 1rem;
         -moz-border-radius: 1rem;
         -ms-border-radius: 1rem;
         -o-border-radius: 1rem;
-        -webkit-transform: scaleX(1.2);
-        -moz-transform: scaleX(1.2);
-        -ms-transform: scaleX(1.2);
-        -o-transform: scaleX(1.2);
+        -webkit-transform: scale(1.1,1.1);
+        -moz-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        -o-transform: scale(1.1,1.1);
 }
 }
 
 
-@media(max-width:450px){
+@media(max-width:500px){
 
     .page1-poster--div{
         height: 19rem;
