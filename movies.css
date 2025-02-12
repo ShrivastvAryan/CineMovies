@@ -724,10 +724,74 @@ header{
     .footer{
     font-size: 0.6rem;
     height: 5rem;
+    position: relative;
+    bottom: 0;
 
     & p{
         text-align: center;
         padding-top: 0.5rem;
     }
     }
+}
+
+@media(max-width:367px){
+    
+    .movie-cards{
+        padding: 1rem;
+        height: auto;
+    
+       & .movie-card{
+        z-index:1;
+        position: relative;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+        grid-template-rows: auto;
+        color: rgb(19, 133, 233);
+        }
+        
+        & .movie-name{
+            font-size: 0.8rem; 
+            width: auto;  
+            margin-left: 5rem;
+        }
+    
+        & .movie-type{
+            font-size: 1rem;
+            font-family: sans-serif;
+            font-weight: 600;
+            background: none;
+            text-align: center;
+        }
+    
+        & .movie-runtime{
+            font-size: 0.6rem;
+            font-family: sans-serif;
+            font-weight: 500;
+            
+        }
+    
+        & span{
+            width: 9rem;
+            border-radius: 0.7rem;
+            -webkit-border-radius: 0.7rem;
+            -moz-border-radius: 0.7rem;
+            -ms-border-radius: 0.7rem;
+            -o-border-radius: 0.7rem;
+    
+            &:hover{
+                cursor:pointer;            
+                
+            }
+    }
+    }
+
+    .movie-cards--photo{
+        height: 18rem;
+        width: 14rem;
+        border-radius: 0.7rem;
+        background-size: auto;
+    }
+
+
 }
