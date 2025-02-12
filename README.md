@@ -1,3 +1,3 @@
 # CineMovies
 
-https://cine-movies-snowy.vercel.app/
+https://cinemoviesz.netlify.app/
